@@ -8,9 +8,9 @@ const formSchema=new mongoose.Schema(
 
         email:{type:String, require:true},
 
-        contactNo:{type:Number, require:true},
+        contactNo:{type:Number, require:false},
 
-        description:{type:String}
+        description:{type:String,require:true}
     },
     {
         timestamps:{createdAt:"createOn", updatedAt:"modifiedOn"},

@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React from 'react'
+import "../Styles/AdminPage.css"
 
 export default function AdminPage() {
     const submit=(e)=>{
@@ -22,17 +23,20 @@ export default function AdminPage() {
     }
   return (
     <div>
-          AdminPage
-          <form>
-            <label>Email</label>
+     
+          <form className='form'>
+            <h1>Admin Login</h1>
+            <label>Email :</label>
+            <br></br>
             <input type="email" placeholder='email' id="email" />
             <br></br>
 
-              <label>Password</label>
+              <label>Password :</label>
+              <br></br>
               <input type="password" placeholder='password' id="pwd" />
               <br></br>
 
-              <input onClick={submit} type="submit" value="Login" />
+              <button id='login' onClick={submit}>Login</button>
           </form>
     </div>
   )

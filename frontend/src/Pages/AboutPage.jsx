@@ -1,5 +1,6 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import '../Styles/AboutPage.css'
 
 export default function AboutPage() {
     const [data, setData] = useState({});
@@ -12,8 +13,8 @@ export default function AboutPage() {
 
 
     return (
-        <div>
-            AboutPage
+        <div className='about-container'>
+            
             {data.length == 0 ? <div>Loading...</div> : 
             <div>
                 <h1>{data.header}</h1>
