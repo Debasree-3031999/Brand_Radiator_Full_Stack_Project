@@ -13,7 +13,7 @@ export default function AdminPage() {
             pwd:pwd
         }
 
-        axios.post("http://localhost:7000/admin",obj).then((data)=>{
+      axios.post("https://debasree-breand-radiator-backend.onrender.com/admin",obj).then((data)=>{
             console.log(data)
             window.location.assign('/dashboard')
         }).catch((error)=>{

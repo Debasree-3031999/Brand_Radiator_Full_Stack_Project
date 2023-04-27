@@ -20,7 +20,7 @@ export default function ContactUsPage() {
                 contactNo: mNo,
                 description: concern
             }
-            axios.post("http://localhost:7000/form", obj).then((data) => {
+            axios.post("https://debasree-breand-radiator-backend.onrender.com/form", obj).then((data) => {
                 console.log(data)
                 window.location.assign('/')
             })
