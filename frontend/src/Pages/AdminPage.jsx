@@ -1,8 +1,10 @@
 import axios from 'axios';
-import React from 'react'
-import "../Styles/AdminPage.css"
+import React, { useState } from 'react'
+import "../Styles/AdminPage.css";
+import { Link } from 'react-router-dom';
 
 export default function AdminPage() {
+  const [login,setLogin]=useState(false)
     const submit=(e)=>{
         e.preventDefault();
         let email=document.getElementById("email").value;
@@ -15,7 +17,7 @@ export default function AdminPage() {
 
       axios.post("https://debasree-breand-radiator-backend.onrender.com/admin",obj).then((data)=>{
             console.log(data)
-            window.location.assign('/dashboard')
+            setLogin(true)
         }).catch((error)=>{
             console.log(error)
             alert(error.response.data)
@@ -23,8 +25,7 @@ export default function AdminPage() {
     }
   return (
     <div>
-     
-          <form className='form'>
+            {!login ?<form className='form'>
             <h1>Admin Login</h1>
             <label>Email :</label>
             <br></br>
@@ -36,8 +37,10 @@ export default function AdminPage() {
               <input type="password" placeholder='password' id="pwd" />
               <br></br>
 
-              <button id='login' onClick={submit}>Login</button>
-          </form>
+              <button id='login' disabled={login?true:false} onClick={submit}>Login</button>
+
+          </form>:<Link to="/dashboard"><button>To dashboard</button>
+      </Link>}
     </div>
   )
 }

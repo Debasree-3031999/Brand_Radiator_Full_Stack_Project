@@ -34,8 +34,7 @@ export default function ContactUsPage() {
 
     return (
         <div>
-            ContactUsPage
-
+           
             <form className='form'>
                 <h1>Contact Us!</h1>
                 <label>First Name<span style={{ color: 'red' }}>*</span> :</label>

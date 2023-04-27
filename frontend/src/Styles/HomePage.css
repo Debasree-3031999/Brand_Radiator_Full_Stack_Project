@@ -1,0 +1,17 @@
+.rainbow-circle {
+  width: 40vw;
+  height: 40vw;
+  border-radius: 50%;
+  margin: auto;
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
