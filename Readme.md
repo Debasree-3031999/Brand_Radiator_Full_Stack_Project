@@ -28,6 +28,7 @@ In contact us you will be creating a form which will store data on the click of 
 <ul>Frontend (./frontend)</ul>
 <ul><code>npm install</code></ul>
 <ul><code>npm run dev</code></ul>
+<ul>For Admin Login use <code>admin</code> as email and <code>1234</code> as password.
 <ul>Backend (./server)</ul>
 <ul><code>npm install</code></ul>
 <ul><code>npm start</code></ul>
