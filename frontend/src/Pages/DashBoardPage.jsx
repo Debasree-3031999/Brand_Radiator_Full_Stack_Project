@@ -6,7 +6,7 @@ export default function DashBoardPage() {
     const [data, setData] = useState([]);
     // const [headers,setHeaders]=useState([])
     useEffect(() => {
-        axios.get("http://localhost:7000/form").then((res) => {
+        axios.get("https://debasree-breand-radiator-backend.onrender.com/form").then((res) => {
             console.log(res.data.getFormtData)
             setData(res.data.getFormtData)
             
